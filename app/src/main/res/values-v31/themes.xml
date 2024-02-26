@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<resources>
+
+    <style name="Theme.MAinActivity" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/primary_blue</item>
+        <item name="android:statusBarColor">@color/primary_blue</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/logo</item>
+        <item name="windowSplashScreenAnimationDuration">2000</item>
+        <item name="postSplashScreenTheme">@style/Theme.ECommerce</item>
+        <item name="android:windowLightStatusBar">false</item> <!--make content of status bar white -->
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+
+
+</resources>
