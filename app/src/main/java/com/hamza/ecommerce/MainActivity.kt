@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
                     -splashScreenView.height.toFloat()
                 )
                 slideUp.interpolator = AnticipateInterpolator()
-                slideUp.duration = 3000L
+                slideUp.duration = 1000L
                 slideUp.doOnEnd { splashScreenView.remove() }
                 slideUp.start()
             }
