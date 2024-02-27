@@ -1,76 +1,47 @@
 package com.hamza.ecommerce
 
 import android.animation.ObjectAnimator
+import android.annotation.SuppressLint
 import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.view.ViewTreeObserver
+import android.view.animation.AnticipateInterpolator
 import android.view.animation.BounceInterpolator
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.animation.doOnEnd
 import androidx.core.splashscreen.SplashScreen
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-@RequiresApi(Build.VERSION_CODES.S)
-class MainActivity : AppCompatActivity() {
-    private lateinit var splashScreen: SplashScreen
-    override fun onCreate(savedInstanceState: Bundle?) {
-        // Handles the splash screen transition
-        splashScreen = installSplashScreen()
 
+class MainActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        initSplash()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        useCustomExitAnimation()
 
-
-        // keepSplashScreenFor5Seconds()
-
-
-        // keepSplashScreenIndefinitely()
     }
 
-    /**
-     * Use customize exit animation for splash screen.
-     */
-    private fun useCustomExitAnimation() {
-        splashScreen.setOnExitAnimationListener { splashScreenViewProvider ->
-            val splashScreenView = splashScreenViewProvider.view
-            val slideUp = ObjectAnimator.ofFloat(
-                splashScreenView,
-                View.TRANSLATION_Y,
-                0f,
-                -splashScreenView.height.toFloat(),
-            )
-            slideUp.interpolator = BounceInterpolator()
-            slideUp.duration = 200L
-            slideUp.doOnEnd {
-                splashScreenViewProvider.remove()
+    @SuppressLint("Recycle")
+    private fun initSplash() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            splashScreen.setOnExitAnimationListener { splashScreenView ->
+                val slideUp = ObjectAnimator.ofFloat(
+                    splashScreenView,
+                    View.TRANSLATION_Y,
+                    0f,
+                    -splashScreenView.height.toFloat()
+                )
+                slideUp.interpolator = AnticipateInterpolator()
+                slideUp.duration = 3000L
+                slideUp.doOnEnd { splashScreenView.remove() }
+                slideUp.start()
             }
-            slideUp.start()
+        } else {
+            setTheme(R.style.Theme_ECommerce)
         }
     }
 
-    /**
-     * Keep splash screen on-screen indefinitely. This is useful if you're using a custom Activity
-     * for routing.
-     */
-    private fun keepSplashScreenIndefinitely() {
-        splashScreen.setKeepOnScreenCondition { true }
-    }
-
-    /**
-     * Keep splash screen on-screen for longer period. This is useful if you need to load data when
-     * splash screen is appearing.
-     */
-    private fun keepSplashScreenFor5Seconds() {
-        val content = findViewById<View>(android.R.id.content)
-        content.viewTreeObserver.addOnPreDrawListener(object : ViewTreeObserver.OnPreDrawListener {
-            override fun onPreDraw(): Boolean {
-                Thread.sleep(5000)
-                content.viewTreeObserver.removeOnPreDrawListener(this)
-                return true
-            }
-        })
-    }
 }
