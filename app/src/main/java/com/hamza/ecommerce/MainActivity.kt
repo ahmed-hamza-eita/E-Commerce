@@ -23,10 +23,11 @@ class MainActivity : AppCompatActivity() {
         initSplash()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        findViewById<TextView>(R.id.txt).setOnClickListener {
-            throw RuntimeException("Test Crash") // Force a crash
-        }
 
+
+        findViewById<TextView>(R.id.txt).setOnClickListener {
+            throw RuntimeException("This is a crash")
+        }
     }
 
     @SuppressLint("Recycle")
