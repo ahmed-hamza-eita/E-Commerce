@@ -31,6 +31,9 @@ class LoginFragment : Fragment() {
 
     }
 
+    companion object {
+        private const val TAG = "LoginFragment"
+    }
 
     override fun onDestroy() {
         super.onDestroy()
