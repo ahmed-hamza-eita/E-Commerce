@@ -1,4 +1,4 @@
-package com.hamza.ecommerce.ui.auth.login;
+package com.hamza.ecommerce.ui.auth.login
 
 import android.os.Bundle
 import android.view.LayoutInflater
