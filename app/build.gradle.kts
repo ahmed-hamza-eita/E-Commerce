@@ -60,4 +60,9 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:$navVersion")
     implementation("androidx.navigation:navigation-dynamic-features-fragment:$navVersion")
 
+    //dataStore
+    implementation("androidx.datastore:datastore-preferences:1.0.0")
+
+
+
 }
