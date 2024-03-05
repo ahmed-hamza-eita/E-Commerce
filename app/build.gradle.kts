@@ -69,5 +69,6 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version")
     implementation("androidx.fragment:fragment-ktx:1.6.2")
     implementation("androidx.activity:activity-ktx:1.8.2")
-
+//reactive network
+    implementation ("com.github.pwittchen:reactivenetwork-rx2:3.0.8")
 }
