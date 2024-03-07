@@ -14,6 +14,7 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.animation.doOnEnd
 import androidx.lifecycle.lifecycleScope
+import com.hamza.ecommerce.data.repository.user.UserPreferenceRepository
 import com.hamza.ecommerce.data.repository.user.UserPreferenceRepositoryImpl
 import com.hamza.ecommerce.ui.auth.AuthActivity
 import com.hamza.ecommerce.ui.common.viewmodels.UserViewModel
