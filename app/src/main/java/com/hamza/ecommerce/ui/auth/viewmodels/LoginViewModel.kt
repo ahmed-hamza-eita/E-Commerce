@@ -1,4 +1,4 @@
-package com.hamza.ecommerce.ui.auth.login
+package com.hamza.ecommerce.ui.auth.viewmodels
 
 import androidx.lifecycle.ViewModel
 import com.hamza.ecommerce.data.repository.user.UserPreferenceRepository

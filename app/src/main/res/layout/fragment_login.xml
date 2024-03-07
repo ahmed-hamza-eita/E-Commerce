@@ -6,7 +6,7 @@
 
         <variable
             name="viewmodel"
-            type="com.hamza.ecommerce.ui.auth.login.LoginViewModel" />
+            type="com.hamza.ecommerce.ui.auth.viewmodels.LoginViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
