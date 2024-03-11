@@ -14,6 +14,7 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.animation.doOnEnd
 import androidx.lifecycle.lifecycleScope
+import com.hamza.ecommerce.data.datasource.datastore.UserPreferencesDataSource
 import com.hamza.ecommerce.data.repository.user.UserPreferenceRepository
 import com.hamza.ecommerce.data.repository.user.UserPreferenceRepositoryImpl
 import com.hamza.ecommerce.ui.auth.AuthActivity
@@ -26,7 +27,7 @@ import kotlinx.coroutines.launch
 class MainActivity : AppCompatActivity() {
 
     private val userViewModel: UserViewModel by viewModels {
-        UserViewModelFactory(UserPreferenceRepositoryImpl(this@MainActivity))
+        UserViewModelFactory(UserPreferenceRepositoryImpl(UserPreferencesDataSource(this)))
     }
     @RequiresApi(Build.VERSION_CODES.S)
     override fun onCreate(savedInstanceState: Bundle?) {
