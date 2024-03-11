@@ -7,13 +7,14 @@ import androidx.lifecycle.viewmodel.CreationExtras
 import com.hamza.ecommerce.data.repository.user.UserPreferenceRepository
 import com.hamza.ecommerce.data.repository.user.UserPreferenceRepositoryImpl
 import kotlinx.coroutines.Dispatchers.IO
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 
 class UserViewModel(private val userPreferencesRepository: UserPreferenceRepositoryImpl) :
     ViewModel() {
 
-    suspend fun isUserLoggedIn() = userPreferencesRepository.isUserLoggedIn()
-    suspend fun setLoggedInStatus(value: Boolean) {
+    suspend fun isUserLoggedIn() = userPreferencesRepository.isUserLoggedIn().first()
+      fun setLoggedInStatus(value: Boolean) {
         viewModelScope.launch(IO) {
             userPreferencesRepository.saveLoginStatus(value)
         }
