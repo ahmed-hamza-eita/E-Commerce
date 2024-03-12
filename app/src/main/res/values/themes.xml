@@ -1,15 +1,17 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.ECommerce" parent="Theme.Material3.Light.NoActionBar">
-        <item name="colorPrimary">@color/primary_blue</item>
-        <item name="colorAccent">@color/primary_blue</item>
-        <item name="colorPrimaryDark">@color/primary_blue</item>
+        <item name="colorPrimary">@color/primary_color</item>
+        <item name="colorAccent">@color/primary_color</item>
+        <item name="colorPrimaryDark">@color/primary_color</item>
 
-<!--        System ui configuration-->
+        <!--        System ui configuration-->
         <item name="android:statusBarColor">@color/white</item>
-        <item name="android:windowLightStatusBar">true</item> <!--make content of status bar dark -->
+        <item name="android:windowLightStatusBar">true
+        </item> <!--make content of status bar dark -->
         <item name="android:navigationBarColor">@color/white</item>
-        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item> <!--make content of navigation bar dark -->
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true
+        </item> <!--make content of navigation bar dark -->
     </style>
 
     <style name="Theme.ECommerce" parent="Base.Theme.ECommerce" />
@@ -17,12 +19,24 @@
     <style name="MainActivityTheme" parent="Theme.ECommerce">
         <item name="android:windowBackground">@drawable/launch_background</item>
         <!--        System ui configuration-->
-        <item name="android:statusBarColor">@color/primary_blue</item>
-        <item name="android:windowLightStatusBar">false</item> <!--make content of status bar white -->
-        <item name="android:navigationBarColor">@color/primary_blue</item>
+        <item name="android:statusBarColor">@color/primary_color</item>
+        <item name="android:windowLightStatusBar">false
+        </item> <!--make content of status bar white -->
+        <item name="android:navigationBarColor">@color/primary_color</item>
         <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">false</item>
 
     </style>
 
 
+    <style name="TitleTextStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/primary_dark_color</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="DescribeMessageStyle">
+    <item name="android:textSize">12sp</item>
+    <item name="android:textColor">@color/neutral_grey_color</item>
+
+    </style>
 </resources>

@@ -74,4 +74,7 @@ dependencies {
     implementation("androidx.activity:activity-ktx:1.8.2")
 //reactive network
     implementation ("com.github.pwittchen:reactivenetwork-rx2:3.0.8")
+    //sdp-ssp
+    implementation ("com.intuit.sdp:sdp-android:1.0.6")
+    implementation ("com.intuit.ssp:ssp-android:1.0.6")
 }
