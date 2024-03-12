@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">E-Commerce</string>
+    <string name="auth_welcome_msg">Welcome to E-commerce</string>
+    <string name="sign_in_message">Sign in to continue</string>
 </resources>
