@@ -36,7 +36,23 @@
 
     <style name="DescribeMessageStyle">
     <item name="android:textSize">12sp</item>
-    <item name="android:textColor">@color/neutral_grey_color</item>
-
+    <item name="android:textColor">@color/neutral_grey</item>
     </style>
+
+    <style name="EditTextStyle">
+
+        <item name="android:paddingTop">@dimen/_8sdp</item>
+        <item name="android:paddingBottom">@dimen/_8sdp</item>
+        <item name="android:paddingStart">@dimen/_16sdp</item>
+        <item name="android:paddingEnd">@dimen/_16sdp</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:textColor">@color/neutral_grey</item>
+        <item name="android:drawablePadding">@dimen/_8sdp</item>
+        <item name="android:textColorHint">@color/neutral_grey</item>
+        <item name="hintTextColor">@color/neutral_grey</item>
+        <item name="android:background">@drawable/edit_text_bg</item>
+        <item name="android:layout_marginHorizontal" tools:targetApi="o">@dimen/_8sdp</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+
 </resources>

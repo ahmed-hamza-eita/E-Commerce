@@ -32,11 +32,27 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_8sdp"
                 android:text="@string/auth_welcome_msg" />
+
             <androidx.appcompat.widget.AppCompatTextView
                 style="@style/DescribeMessageStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/sign_in_message" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/email_et"
+                style="@style/EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_48sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:drawableStart="@drawable/ic_email"
+                android:hint="@string/e_mail" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                style="@style/EditTextStyle"
+                android:hint="@string/password"
+                android:drawableStart="@drawable/ic_password"
+                android:layout_height="@dimen/_48sdp"/>
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
