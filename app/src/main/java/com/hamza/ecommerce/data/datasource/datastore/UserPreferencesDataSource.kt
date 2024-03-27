@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
 class UserPreferencesDataSource(private val context: Context) {
-    private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "user_preferences")
+    //private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "user_preferences")
 
     suspend fun saveUserLoggedInState(isUserLoggedIn: Boolean) {
         context.dataStore.edit { preferences ->
