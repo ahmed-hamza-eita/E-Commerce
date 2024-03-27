@@ -17,9 +17,9 @@ class FirebaseAuthRepositoryImpl(private val auth: FirebaseAuth = FirebaseAuth.g
             emit(Resource.Loading())
 
             val result = auth.signInWithEmailAndPassword(email, password).await()
-            auth.currentUser?.let { user ->
+            auth.currentUser?.let { user ->    //if result is not null
                 (Resource.Success(user.uid))
-            } ?: run {
+            } ?: run {  //if result is  null
                 emit(Resource.Error(Exception("User not found")))
             }
         } catch (e: Exception) {
