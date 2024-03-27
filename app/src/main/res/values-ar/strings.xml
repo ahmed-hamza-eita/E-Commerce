@@ -1,13 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">E-Commerce</string>
-    <string name="auth_welcome_msg">Welcome to E-commerce</string>
-    <string name="sign_in_message">Sign in to continue</string>
     <string name="e_mail">E-mail</string>
-    <string name="password">Password</string>
-    <string name="sign_in">Sign In</string>
     <string name="or">or</string>
     <string name="login_with_google_msg">Login with Google</string>
-    <string name="login_with_facebook_msg">Login with Facebook</string>
     <string name="forgot_password_msg">Forgot Password?</string>
     <string name="don_t_have_a_account_msg">Don’t have a account?</string>
     <string name="register">Register</string>

@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
             if (isLoggedIn) {
                 setContentView(R.layout.activity_main)
             } else {
-             userViewModel.setLoggedInStatus(true)
+           //  userViewModel.setLoggedInStatus(true)
                 goToAuthActivity()
             }
         }
