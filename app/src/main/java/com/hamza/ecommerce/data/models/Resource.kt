@@ -1,4 +1,5 @@
-package com.hamza.ecommerce.data.models
+package com.hamza.ecommerce.data.models;
+
 
 sealed class Resource<T>(
     val data: T? = null, val exception: Exception? = null
