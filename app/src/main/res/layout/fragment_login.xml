@@ -16,8 +16,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center_horizontal"
             android:layout_gravity="center"
+            android:gravity="center_horizontal"
             android:orientation="vertical">
 
             <ImageView
@@ -46,7 +46,8 @@
                 android:layout_height="@dimen/_48sdp"
                 android:layout_marginTop="@dimen/_36sdp"
                 android:drawableStart="@drawable/ic_email"
-                android:hint="@string/e_mail" />
+                android:hint="@string/e_mail"
+                android:text="@={viewmodel.email}" />
 
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/password_et"
@@ -54,7 +55,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_48sdp"
                 android:drawableStart="@drawable/ic_password"
-                android:hint="@string/password" />
+                android:hint="@string/password"
+                android:text="@={viewmodel.password}" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/btn_sign_in"
